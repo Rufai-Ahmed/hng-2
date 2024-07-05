@@ -9,5 +9,6 @@ export interface iCard {
   stars?: number;
   raters?: number;
   price?: number;
+  colour?: string;
   oldPrice?: number;
 }

@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full flex items-center justify-center h-[90px] border-b bg-white ${
+      className={`w-full flex items-center justify-center h-[90px] md:border-b bg-white ${
         position ? "fixed top-0 z-50" : ""
       }`}
     >
@@ -53,7 +53,9 @@ const Header = () => {
               href={el.link!}
               key={i}
               className={`capitalize hover:text-[#307C31] duration-300 cursor-pointer ${
-                isActive(el?.link!) ? "text-[#307C31]" : ""
+                isActive(el?.link!) || (i === 0 && el.name === "categories")
+                  ? "text-[#307C31]"
+                  : ""
               }`}
             >
               {el.name}
@@ -75,13 +77,13 @@ const Header = () => {
           <FaSearch size={18} className="ml-4 lg:hidden" />
 
           <div className="flex items-center gap-5">
-            <div className="relative">
+            <Link href={"/cart"} className="relative">
               <BsCart2 size={25} />
 
               <div className="w-5 h-5 rounded-full absolute -top-2 -right-2 flex items-center justify-center bg-red-500 text-white text-[10px]">
                 2
               </div>
-            </div>
+            </Link>
 
             <IoPersonCircleOutline size={25} />
           </div>

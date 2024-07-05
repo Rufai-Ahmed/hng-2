@@ -3,8 +3,10 @@ import { cardData } from "@/public/data/data";
 import { iCard } from "@/public/interfaces";
 import Image from "next/image";
 import React, { useState } from "react";
+import { BiSortAlt2 } from "react-icons/bi";
 import { BsCart2, BsStarFill, BsX } from "react-icons/bs";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { FiFilter } from "react-icons/fi";
 import { LiaAngleDownSolid } from "react-icons/lia";
 
 const CardScreen = () => {
@@ -25,6 +27,20 @@ const CardScreen = () => {
 
   return (
     <main className="w-full">
+      <div className="w-full h-[48px] bg-[#DADADA] rounded-md px-3 md:hidden flex items-center justify-between">
+        <div className="flex font-bold items-center gap-3">
+          <FiFilter size={24} />
+          <p>Filter</p>
+        </div>
+
+        <div className="h-[40px] w-[1px] bg-black" />
+
+        <div className="flex font-bold items-center gap-3">
+          <BiSortAlt2 size={24} />
+          <p>Best Selling</p>
+        </div>
+      </div>
+
       <div className="hidden md:flex gap-3 items-center">
         <h4 className="font-bold text-[20px]">Best Selling</h4>
         <LiaAngleDownSolid size={24} />
@@ -58,6 +74,7 @@ const CardScreen = () => {
               alt={el.name!}
               src={el.img!}
               width={100}
+              unoptimized
               height={100}
               className="w-full h-[65%] object-cover object-center"
             />
