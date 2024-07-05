@@ -45,7 +45,7 @@ const page = () => {
             </div>
 
             {data.map((el: iCard, i: number) => (
-              <CartCard {...el} />
+              <CartCard key={i} {...el} />
             ))}
           </div>
 
