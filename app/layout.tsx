@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./__components/static/Header";
+import "sweetalert2/src/sweetalert2.scss";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 

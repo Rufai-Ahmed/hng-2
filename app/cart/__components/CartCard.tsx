@@ -35,7 +35,7 @@ const CartCard: FC<iCard> = ({ colour, name, img }) => {
         <PiPlusSquare size={25} />
       </div>
 
-      <div className="flex items-center gap-8">
+      <div className="flex items-ceter gap-8">
         <h4>$200</h4>
         <RiDeleteBinLine size={24} color="#F50A0A" />
       </div>

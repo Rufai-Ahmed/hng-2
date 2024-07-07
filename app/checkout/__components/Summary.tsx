@@ -23,9 +23,12 @@ const Summary = () => {
         </div>
       </div>
 
-      <button className="w-full py-2 rounded-md text-white bg-[#307C31] flex justify-center items-center mt-3 gap-4">
-        <Link href={"/checkout"}>Proceed to Checkout</Link>
-      </button>
+      <hr className="my-3" />
+      <div className="flex items-center justify-between">
+        <h2 className="text-[25px]">Total</h2>
+
+        <b>$300</b>
+      </div>
     </div>
   );
 };

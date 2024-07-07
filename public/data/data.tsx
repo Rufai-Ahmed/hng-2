@@ -1,4 +1,4 @@
-import { iCard, iNav } from "../interfaces";
+import { iCard, iInput, iNav } from "../interfaces";
 
 export const navData: iNav[] = [
   {
@@ -173,5 +173,32 @@ export const cardData: iCard[] = [
     oldPrice: 600,
     price: 500,
     img: "/assets/jordan.png",
+  },
+];
+
+export const inputData: iInput[] = [
+  {
+    name: "firstName",
+    placeholder: "First Name",
+  },
+  {
+    name: "lastName",
+    placeholder: "last Name",
+  },
+  {
+    name: "number",
+    placeholder: "Phone No",
+  },
+  {
+    name: "email",
+    placeholder: "Email Address",
+  },
+  {
+    name: "city",
+    placeholder: "City",
+  },
+  {
+    name: "state",
+    placeholder: "State",
   },
 ];

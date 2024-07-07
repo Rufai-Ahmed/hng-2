@@ -7,7 +7,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import Summary from "./__components/Summary";
 
 const page = () => {
-  const data = [cardData[0], cardData[1]];
+  const data: iCard[] = [cardData[0], cardData[1]];
 
   return (
     <div className="container mx-auto px-4 pb-9 md:pt-9 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1300px]">
