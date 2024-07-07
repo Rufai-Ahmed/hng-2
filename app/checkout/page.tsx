@@ -9,7 +9,7 @@ import Progress from "./__components/Progress";
 
 const page = () => {
   return (
-    <div className="container mx-auto px-4 pb-9 md:pt-9 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1300px] min-h-[calc(100vh-90px)]">
+    <div className="container mx-auto px-4 pb-9 md:pt-9 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1300px] min-h-[1000px]">
       <Progress />
 
       <div className="flex items-center gap-3 mb-9 md:mb-0">
