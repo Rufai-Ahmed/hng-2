@@ -5,6 +5,7 @@ import { cardData } from "@/public/data/data";
 import { iCard } from "@/public/interfaces";
 import { BsArrowLeft } from "react-icons/bs";
 import Summary from "./__components/Summary";
+import Link from "next/link";
 
 const page = () => {
   const data: iCard[] = [cardData[0], cardData[1]];
@@ -57,11 +58,11 @@ const page = () => {
 
       <div className="flex mt-7 cursor-pointer items-center gap-3 font-bold text-[#307C31]">
         <BsArrowLeft size={20} />
-        <small>Continue Shopping</small>
+        <Link href={"/"}>Continue Shopping</Link>
       </div>
 
       <button className="w-full py-2 rounded-md text-white bg-[#307C31] flex justify-center items-center mt-6 gap-4 md:hidden">
-        Proceed to Checkout
+        <Link href={"/checkout"}>Proceed to Checkout</Link>
       </button>
     </div>
   );
