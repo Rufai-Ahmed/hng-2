@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Progress from "../checkout/__components/Progress";
 import { BsArrowLeft, BsPerson } from "react-icons/bs";
@@ -11,28 +11,27 @@ import Link from "next/link";
 import ReactDOMServer from "react-dom/server";
 import Swal from "sweetalert2";
 
-const page = () => {
+const Page = () => {
+  const [state, setState] = useState<boolean>(false);
 
-    const [state, setState] = useState<boolean>(false)
-    
-    const handleClick: () => void= () =>
-      {  Swal.fire({
-          title: "Successful!",
-          text: "Your order has been successfully received",
-          icon: "success",
-          confirmButtonText: ReactDOMServer.renderToString(
-            <>
-              <button>
-                <Link href={"/"}>Back Home</Link>
-              </button>
-            </>
-          ),
-          confirmButtonColor: "#307C31",
-          confirmButtonAriaLabel: "Thumbs up, great!",
-        })
-    
-        setState(true)
-    }
+  const handleClick: () => void = () => {
+    Swal.fire({
+      title: "Successful!",
+      text: "Your order has been successfully received",
+      icon: "success",
+      confirmButtonText: ReactDOMServer.renderToString(
+        <>
+          <button>
+            <Link href={"/"}>Back Home</Link>
+          </button>
+        </>
+      ),
+      confirmButtonColor: "#307C31",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+
+    setState(true);
+  };
 
   return (
     <div className="container mx-auto px-4 pb-9 md:pt-9 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1300px] min-h-[1000px]">
@@ -173,7 +172,10 @@ const page = () => {
         </div>
 
         <div className="w-full lg:hidden col-span-11 flex items-center justify-center">
-          <button onClick={handleClick} className="w-[90%] lg:hidden py-2 rounded-md text-white bg-[#307C31] flex justify-center items-center mt-3 ">
+          <button
+            onClick={handleClick}
+            className="w-[90%] lg:hidden py-2 rounded-md text-white bg-[#307C31] flex justify-center items-center mt-3 "
+          >
             Proceed to Pay $330
           </button>
         </div>
@@ -186,4 +188,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
