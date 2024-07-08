@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { BiSortAlt2 } from "react-icons/bi";
 import { BsCart2, BsStarFill, BsX } from "react-icons/bs";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import Link from "next/link";
 import { FiFilter } from "react-icons/fi";
 import { LiaAngleDownSolid } from "react-icons/lia";
 
@@ -81,14 +82,16 @@ const CardScreen = () => {
             <div className="h-[35%] space-y-3">
               <h4 className="font-bold text-[24px] capitalize">{el.name}</h4>
               <div className="flex gap-4 items-center">
-                {Array.from({ length: el.stars! }).map((_, idx) => (
-                  <BsStarFill
-                    key={idx}
-                    color="#FDAA0B"
-                    className="text-[#FDAA0B]"
-                    size={22}
-                  />
-                ))}
+                {Array.from({ length: el.stars! }).map(
+                  (el: unknown, index: number) => (
+                    <BsStarFill
+                      key={index}
+                      color="#FDAA0B"
+                      className="text-[#FDAA0B]"
+                      size={22}
+                    />
+                  )
+                )}
                 <b className="font-semibold text-[16px]">({el.raters})</b>
               </div>
               <div className="flex items-center gap-5 my-3">
@@ -98,8 +101,10 @@ const CardScreen = () => {
                 </h4>
               </div>
               <button className="w-full py-2 rounded-md text-white bg-[#307C31] flex justify-center items-center gap-4">
-                <BsCart2 size={24} />
-                Add to cart
+                <Link href={"/cart"}>
+                  <BsCart2 size={24} />
+                  Add to cart
+                </Link>
               </button>
             </div>
           </div>
