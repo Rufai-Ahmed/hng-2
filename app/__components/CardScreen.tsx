@@ -101,7 +101,7 @@ const CardScreen = () => {
                 </h4>
               </div>
               <button className="w-full py-2 rounded-md text-white bg-[#307C31] flex justify-center items-center gap-4">
-                <Link href={"/cart"}>
+                <Link href={"/cart"} className="flex items-center gap-4">
                   <BsCart2 size={24} />
                   Add to cart
                 </Link>
